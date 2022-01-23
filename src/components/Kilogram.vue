@@ -15,7 +15,7 @@ export default {
       ürün: [
         {
           ad: "Kako",
-          gram: 20,
+          gram: 25,
         },
         {
           ad: "Un",
