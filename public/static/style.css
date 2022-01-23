@@ -1,0 +1,92 @@
+* {
+  margin: 0%;
+}
+body {
+  background-color: rgb(172, 135, 88);
+}
+.homeimg > img {
+  border-radius: 100%;
+  width: 25%;
+  position: relative;
+  margin-left: 35%;
+
+  clear: both;
+}
+
+.contentbig {
+  position: relative;
+  margin-left: 43%;
+}
+.homeimg {
+  background-color: rgb(34, 32, 32);
+}
+
+header {
+  position: relative;
+  margin-left: 25%;
+}
+
+.container {
+  position: relative;
+  margin-left: 25%;
+  width: 50%;
+  border: dashed 5px;
+  font-style: oblique;
+  height: 300px;
+}
+.sayfa-baslık {
+  margin-left: 35%;
+}
+
+.gramaj {
+  margin-left: 30%;
+}
+.gramaj > ol > li {
+  margin: 2%;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  font-style: oblique;
+}
+
+.kişisayısı {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+button {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  margin-left: 2px;
+  border-radius: 15%;
+  margin-bottom: 5px;
+}
+
+.speech-bubble {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  border-radius: 6em;
+  width: 25%;
+  height: 25%;
+  margin-left: 60%;
+}
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 51px solid transparent;
+  border-right-color: #ffffff;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -25.5px;
+  margin-left: -51px;
+}
+
+.iç {
+  margin-left: 20%;
+}
