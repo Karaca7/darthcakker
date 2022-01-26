@@ -19,9 +19,7 @@
   <div class="gramaj">
     <ol>
       <li v-for="eleman in ürün" v-bind:key="eleman">
-        {{ eleman.ad }} :<span v-if="eleman.gram * seçilen > 999"
-          >{{ (eleman.gram * seçilen) / 1000 }}kg</span
-        ><span v-else>{{ eleman.gram * seçilen }}gr</span>
+        {{ eleman.ad }} :<span>{{ hesapla(eleman.gram) }}</span>
       </li>
     </ol>
   </div>
@@ -47,8 +45,18 @@ export default {
         },
         { ad: "Şeker", gram: 170 },
       ],
-      seçilen: "",
+      seçilen: null,
     };
+  },
+  methods: {
+    hesapla(gram) {
+      gram = gram * this.seçilen;
+      if (gram > 999) {
+        return `${gram / 1000}kg.`;
+      } else {
+        return `${gram}gr.`;
+      }
+    },
   },
 };
 </script>
