@@ -9,6 +9,7 @@
       </span>
     </div>
     <hr />
+    <span></span>
 
     <lable>Kişi sayısı:</lable>
     <select v-model="seçilen">
