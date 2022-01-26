@@ -2,6 +2,14 @@
   <div class="sayfa-baslık"><h1>Gramaj</h1></div>
 
   <div class="kişisayısı">
+    <div>
+      <span v-for="eleman in ürün" :key="eleman">
+        <label>{{ eleman.ad }}</label
+        ><input type="checkbox" name="eleman.ad" id="" v-model="eleman.block" />
+      </span>
+    </div>
+    <hr />
+
     <lable>Kişi sayısı:</lable>
     <select v-model="seçilen">
       <option value="">boş</option>
@@ -19,7 +27,9 @@
   <div class="gramaj">
     <ol>
       <li v-for="eleman in ürün" v-bind:key="eleman">
-        {{ eleman.ad }} :<span>{{ hesapla(eleman.gram) }}</span>
+        <span v-if="eleman.block"
+          >{{ eleman.ad }} :{{ hesapla(eleman.gram) }}</span
+        >
       </li>
     </ol>
   </div>
@@ -34,20 +44,24 @@ export default {
         {
           ad: "Kako",
           gram: 50,
+          block: false,
         },
         {
           ad: "Un",
           gram: 100,
+          block: false,
         },
         {
           ad: "Yağ",
           gram: 180,
+          block: false,
         },
-        { ad: "Şeker", gram: 170 },
+        { ad: "Şeker", gram: 170, block: false },
       ],
       seçilen: null,
     };
   },
+
   methods: {
     hesapla(gram) {
       gram = gram * this.seçilen;
